@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Tracking Life of Magic">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="John Kyker">
+    <title>MTG Life Tracker</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./img/icon.jpg" type="image/x-icon">
+  </head>
+  <body>
+<div>
+</div>
+<main>
+  <form>
+    <p>Please select mode:</p>
+    <input type="radio" id="mode" name="mode" value="0">
+    <label for="mode1">1v1</label><br>
+    <input type="radio" id="mode" name="mode" value="1" checked="checked">
+    <label for="mode2">Commander</label><br>  
+    <p>Please select number of players:</p>
+    <input type="radio" id="playerCount" name="player" value="1" onclick="selectPlayerCount(1)">
+    <label for="p1">1</label><br>
+    <input type="radio" id="playerCount" name="player" value="2" onclick="selectPlayerCount(2)">
+    <label for="p2">2</label><br>  
+    <input type="radio" id="playerCount" name="player" value="3" onclick="selectPlayerCount(3)">
+    <label for="p3">3</label><br>
+    <input type="radio" id="playerCount" name="player" value="4" onclick="selectPlayerCount(4)" checked="checked">
+    <label for="p4">4</label><br>
+    <p>
+    <label for="p1name">Player 1 Name:</label><br>
+    <input type="text" id="p1name" name="p1name" value="Player 1"><br>
+    <label for="p2name">Player 2 Name:</label><br>
+    <input type="text" id="p2name" name="p2name" value="Player 2"><br>
+    <label for="p3name">Player 3 Name:</label><br>
+    <input type="text" id="p3name" name="p3name" value="Player 3"><br>
+    <label for="p4name">Player 4 Name:</label><br>
+    <input type="text" id="p4name" name="p4name" value="Player 4"><br><br>
+    <input type="button" id="subButton" value="Submit" onclick="initializeSetup()">
+  </p>
+  </form> 
+</main>
+</body>
+<script type="text/javascript" src="./scripts/start.js"></script>
+<script type="text/javascript" src="./scripts/counter.js"></script>
+</html>
