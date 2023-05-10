@@ -24,20 +24,17 @@ let mode = 1;
 
 function initializeSetup() {
     selectPlayerCount();
-    mode = document.getElementById("mode").value;
-    switch (mode) {
-        case 0:
-            P1Initial = 20;
-            P2Initial = 20;
-            P3Initial = 20;
-            P4Initial = 20;
-            break;
-        case 1:
-            P1Initial = 40;
-            P2Initial = 40;
-            P3Initial = 40;
-            P4Initial = 40;
-            break;
+    if(document.getElementById('standard').checked){
+      P1Initial = 20;
+      P2Initial = 20;
+      P3Initial = 20;
+      P4Initial = 20;
+    }
+    if(document.getElementById('commander').checked){
+      P1Initial = 40;
+      P2Initial = 40;
+      P3Initial = 40;
+      P4Initial = 40;
     }
     Player1Counter = P1Initial;
     Player2Counter = P2Initial;
@@ -56,6 +53,18 @@ function initializeSetup() {
 }
 
 function updateSetup() {
+    if(document.getElementById('standard').checked){
+        P1Initial = 20;
+      P2Initial = 20;
+      P3Initial = 20;
+      P4Initial = 20;
+    }
+    if(document.getElementById('commander').checked){
+      P1Initial = 40;
+      P2Initial = 40;
+      P3Initial = 40;
+      P4Initial = 40;
+    }
     document.getElementById("Player1Name").innerHTML = P1Name;
     document.getElementById("Player2Name").innerHTML = P2Name;
     document.getElementById("Player3Name").innerHTML = P3Name;
